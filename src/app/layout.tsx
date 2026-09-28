@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SITE_NAME, SITE_URL } from "./lib/site";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -18,7 +19,6 @@ const playfair = Playfair_Display({
   preload: true,
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const SITE_TITLE = "Asia University Rankings | Premium Institutional Portal";
 const SITE_DESCRIPTION =
   "Comprehensive editorial rankings and comparisons of top universities across Asia, built for international scholars and medical students.";
@@ -30,7 +30,10 @@ export const metadata: Metadata = {
     template: "%s | Asia University Rankings",
   },
   description: SITE_DESCRIPTION,
-  applicationName: "Asia University Rankings",
+  applicationName: SITE_NAME,
+  verification: {
+    google: "YwB-jm28RtR5Rl3PR-aEUAhGhq0TCx6qZ8IeVgrU8RI",
+  },
   keywords: [
     "Asia university rankings",
     "university comparison",
@@ -38,9 +41,6 @@ export const metadata: Metadata = {
     "higher education",
     "medical universities Central Asia",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     url: "/",

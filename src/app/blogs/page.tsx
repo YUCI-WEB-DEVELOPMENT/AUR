@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { ArrowLeft } from "lucide-react";
@@ -7,6 +8,14 @@ import { SidebarProvider } from "../components/navigation/SidebarContext";
 import { ToastProvider } from "../components/feedback/ToastContext";
 import { UniversityDataProvider } from "../components/data/UniversityDataProvider";
 import { AuthGateProvider } from "../components/auth/AuthGate";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Guides, analysis and insights on studying at universities across Asia, from admissions to rankings.",
+  alternates: { canonical: "/blogs" },
+  openGraph: { url: "/blogs", title: "Blog | Asia University Rankings" },
+};
 
 export default function BlogPage() {
   return (

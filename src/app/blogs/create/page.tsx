@@ -1,10 +1,16 @@
 import React from "react";
+import type { Metadata } from "next";
 import AppLayout from "../../components/layout/AppLayout";
 import BlogForm from "../../components/blog/BlogForm";
 import { ToastProvider } from "../../components/feedback/ToastContext";
 import { SidebarProvider } from "../../components/navigation/SidebarContext";
 import { UniversityDataProvider } from "../../components/data/UniversityDataProvider";
 import { AuthGateProvider } from "../../components/auth/AuthGate";
+
+export const metadata: Metadata = {
+  title: "Write a Blog Post",
+  robots: { index: false, follow: false },
+};
 
 export default function CreateBlogPage() {
   return (

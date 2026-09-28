@@ -1,9 +1,14 @@
 import React, { Suspense } from "react";
+import type { Metadata } from "next";
 import AppContent from "./AppContent";
 import { SidebarProvider } from "./components/navigation/SidebarContext";
 import { ToastProvider } from "./components/feedback/ToastContext";
 import { UniversityDataProvider } from "./components/data/UniversityDataProvider";
 import { AuthGateProvider } from "./components/auth/AuthGate";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
