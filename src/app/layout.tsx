@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 
 const SITE_TITLE = "Asia University Rankings | Premium Institutional Portal";
 const SITE_DESCRIPTION =
-  "Comprehensive editorial rankings and comparisons of top universities across Asia, built for international scholars and medical students.";
+  "Welcome to the official Asia University Rankings portal. Discover premium institutional insights, academic performance metrics, and independent university data across Asia.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Asia university rankings",
+    "Premium Asia university institutional portal",
+    "Independent Asian university performance metrics",
+    "Asia university rankings login portal",
     "university comparison",
     "study in Asia",
     "higher education",
@@ -67,7 +70,9 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "Asia University Rankings",
+  alternateName: "AUR",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description: SITE_DESCRIPTION,
@@ -135,7 +140,9 @@ export default function RootLayout({
         )}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
         />
         {children}
       </body>

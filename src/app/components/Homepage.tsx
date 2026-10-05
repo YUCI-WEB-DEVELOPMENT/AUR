@@ -501,7 +501,10 @@ export default function Homepage({
         <div className="rh-sec" style={{ paddingTop: 0 }}>
           <div className="rh-cta">
             <h2 className="rh-cta__title">Higher Education Intelligence</h2>
-            <p className="rh-cta__sub">Performance metrics, institutional benchmarking, and regional analytics for Asia.</p>
+            <p className="rh-cta__sub">
+              A premium Asia university institutional portal for independent Asian university performance metrics,
+              institutional benchmarking, and regional analysis.
+            </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <button type="button" className="bg-white text-[#1A365D] font-bold text-sm px-6 py-3 rounded" onClick={() => guard("rankings")}>Explore Rankings</button>
               <a href="mailto:sales@asiauniversityrankings.com?subject=Institutional%20Access" className="text-white/90 font-semibold text-sm px-6 py-3 rounded border border-white/30 hover:bg-white/10 transition-colors">Institutional Access</a>
@@ -516,7 +519,10 @@ export default function Homepage({
           <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 mb-16">
             <div className="flex flex-col gap-6 max-w-sm">
               <Image src="/logo.png" alt="AUR Logo" width={140} height={60} className="object-contain" priority />
-              <p className="text-sm text-slate-500 leading-relaxed">The definitive intelligence platform for higher education across Asia and Central Asia.</p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                The definitive intelligence platform for higher education across Asia and Central Asia. Registered
+                institutions can use the Asia University Rankings login portal to manage their profiles and data.
+              </p>
               <div className="flex gap-3">
                 {socialLinks.map(s => (
                   <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
